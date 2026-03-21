@@ -1,0 +1,314 @@
+const DATA_PATHS = {
+  profile: 'data/profile.json',
+  experience: 'data/experience.json',
+  articles: 'data/articles.json',
+  projects: 'data/projects.json'
+};
+
+const state = {
+  profile: null,
+  experience: [],
+  articles: [],
+  projects: []
+};
+
+const page = document.body.dataset.page || 'home';
+
+async function loadJson(path) {
+  const response = await fetch(path);
+  if (!response.ok) {
+    throw new Error(`Failed to load ${path}`);
+  }
+  return response.json();
+}
+
+function renderHeader(profile) {
+  const target = document.querySelector('[data-site-header]');
+  if (!target) return;
+
+  const navItems = [
+    ['home', 'Home', 'index.html'],
+    ['about', 'About', 'about.html'],
+    ['experience', 'Experience', 'experience.html'],
+    ['articles', 'Articles', 'articles.html'],
+    ['projects', 'Projects', 'projects.html'],
+    ['contact', 'Contact', 'contact.html']
+  ];
+
+  target.innerHTML = `
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand-mark" href="index.html" aria-label="Babak Mohammadi home">
+          <strong>${profile.name}</strong>
+          <span>${profile.title}</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          ${navItems
+            .map(
+              ([key, label, href]) =>
+                `<a href="${href}" class="${page === key ? 'is-active' : ''}">${label}</a>`
+            )
+            .join('')}
+        </nav>
+      </div>
+    </header>
+  `;
+}
+
+function renderFooter(profile) {
+  const target = document.querySelector('[data-site-footer]');
+  if (!target) return;
+
+  target.innerHTML = `
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="stack-gap">
+          <strong>${profile.name}</strong>
+          <p>${profile.footerBlurb}</p>
+        </div>
+        <div class="site-footer__nav">
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="articles.html">Articles</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+  `;
+}
+
+function applyProfileContent(profile) {
+  document.querySelectorAll('[data-profile-field="headline"]').forEach((node) => {
+    node.textContent = profile.headline;
+  });
+
+  document.querySelectorAll('[data-profile-link]').forEach((node) => {
+    const key = node.dataset.profileLink;
+    const item = profile.links[key];
+    if (!item) return;
+
+    node.href = item.href;
+    node.textContent = item.label;
+    if (item.external) {
+      node.target = '_blank';
+      node.rel = 'noreferrer';
+    }
+  });
+}
+
+function renderHome(profile, experience, articles, projects) {
+  const highlightsTarget = document.querySelector('[data-home-highlights]');
+  if (highlightsTarget) {
+    highlightsTarget.innerHTML = profile.metrics
+      .map((metric) => `<li><strong>${metric.value}</strong><span>${metric.label}</span></li>`)
+      .join('');
+  }
+
+  const focusTarget = document.querySelector('[data-core-focus]');
+  if (focusTarget) {
+    focusTarget.innerHTML = profile.coreFocus
+      .map(
+        (item) => `
+          <article class="card focus-card">
+            <p class="eyebrow">${item.kicker}</p>
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+          </article>
+        `
+      )
+      .join('');
+  }
+
+  const experienceTarget = document.querySelector('[data-experience-preview]');
+  if (experienceTarget) {
+    experienceTarget.innerHTML = experience
+      .slice(0, 3)
+      .map(
+        (item) => `
+          <article class="timeline-item">
+            <p class="eyebrow">${item.period}</p>
+            <h3>${item.role}</h3>
+            <div class="timeline-item__meta">
+              <span>${item.company}</span>
+              <span>${item.location}</span>
+            </div>
+            <p>${item.summary}</p>
+          </article>
+        `
+      )
+      .join('');
+  }
+
+  const projectsTarget = document.querySelector('[data-projects-preview]');
+  if (projectsTarget) {
+    projectsTarget.innerHTML = projects
+      .slice(0, 2)
+      .map(
+        (project) => `
+          <div class="mini-metric">
+            <strong>${project.title}</strong>
+            <span>${project.shortLabel}</span>
+          </div>
+        `
+      )
+      .join('');
+  }
+
+  const articlesTarget = document.querySelector('[data-articles-preview]');
+  if (articlesTarget) {
+    articlesTarget.innerHTML = articles
+      .slice(0, 3)
+      .map(createArticleCard)
+      .join('');
+  }
+}
+
+function renderAbout(profile) {
+  const target = document.querySelector('[data-about-principles]');
+  if (!target) return;
+
+  target.innerHTML = profile.principles
+    .map(
+      (item) => `
+        <article class="card">
+          <p class="eyebrow">${item.kicker}</p>
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+        </article>
+      `
+    )
+    .join('');
+}
+
+function renderExperience(experience) {
+  const target = document.querySelector('[data-experience-timeline]');
+  if (!target) return;
+
+  target.innerHTML = experience
+    .map(
+      (item) => `
+        <article class="timeline-item">
+          <p class="eyebrow">${item.period}</p>
+          <h3>${item.role}</h3>
+          <div class="timeline-item__meta">
+            <span>${item.company}</span>
+            <span>${item.location}</span>
+            <span>${item.type}</span>
+          </div>
+          <p>${item.summary}</p>
+          <ul class="detail-list">
+            ${item.highlights.map((point) => `<li>${point}</li>`).join('')}
+          </ul>
+        </article>
+      `
+    )
+    .join('');
+}
+
+function createArticleCard(article) {
+  return `
+    <article class="card article-card" data-category="${article.category}">
+      <p class="eyebrow">${article.category}</p>
+      <h3>${article.title}</h3>
+      <div class="article-card__meta">
+        <span>${article.platform}</span>
+        <span>${article.year}</span>
+      </div>
+      <p>${article.summary}</p>
+      <div class="article-card__tags">${article.tags.map((tag) => `<span class="tag">${tag}</span>`).join('')}</div>
+      <a class="article-card__link" href="${article.url}">${article.linkLabel}</a>
+    </article>
+  `;
+}
+
+function renderArticles(articles) {
+  const grid = document.querySelector('[data-articles-grid]');
+  const filters = document.querySelector('[data-article-filters]');
+  if (!grid || !filters) return;
+
+  const categories = ['All', ...new Set(articles.map((article) => article.category))];
+  let activeCategory = 'All';
+
+  const paint = () => {
+    grid.innerHTML = articles
+      .filter((article) => activeCategory === 'All' || article.category === activeCategory)
+      .map(createArticleCard)
+      .join('');
+
+    if (!grid.innerHTML.trim()) {
+      grid.innerHTML = '<div class="empty-state">No articles match this category yet.</div>';
+    }
+
+    filters.querySelectorAll('button').forEach((button) => {
+      button.classList.toggle('is-active', button.dataset.category === activeCategory);
+    });
+  };
+
+  filters.innerHTML = categories
+    .map(
+      (category) =>
+        `<button class="filter-chip ${category === 'All' ? 'is-active' : ''}" data-category="${category}" type="button">${category}</button>`
+    )
+    .join('');
+
+  filters.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-category]');
+    if (!button) return;
+    activeCategory = button.dataset.category;
+    paint();
+  });
+
+  paint();
+}
+
+function createProjectCard(project) {
+  return `
+    <article class="card project-card">
+      <p class="eyebrow">${project.stage}</p>
+      <h3>${project.title}</h3>
+      <div class="project-card__meta">
+        <span>${project.shortLabel}</span>
+        <span>${project.focusArea}</span>
+      </div>
+      <p>${project.summary}</p>
+      <div class="project-card__tags">${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join('')}</div>
+      <a class="project-card__link" href="${project.url}">${project.linkLabel}</a>
+    </article>
+  `;
+}
+
+function renderProjects(projects) {
+  const target = document.querySelector('[data-projects-grid]');
+  if (!target) return;
+  target.innerHTML = projects.map(createProjectCard).join('');
+}
+
+async function init() {
+  try {
+    const [profile, experience, articles, projects] = await Promise.all([
+      loadJson(DATA_PATHS.profile),
+      loadJson(DATA_PATHS.experience),
+      loadJson(DATA_PATHS.articles),
+      loadJson(DATA_PATHS.projects)
+    ]);
+
+    state.profile = profile;
+    state.experience = experience.items;
+    state.articles = articles.items;
+    state.projects = projects.items;
+
+    renderHeader(profile);
+    renderFooter(profile);
+    applyProfileContent(profile);
+    renderHome(profile, state.experience, state.articles, state.projects);
+    renderAbout(profile);
+    renderExperience(state.experience);
+    renderArticles(state.articles);
+    renderProjects(state.projects);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+init();

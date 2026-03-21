@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "title": "Why Operational Discipline Still Wins in Modern Dealerships",
+      "category": "Operations",
+      "platform": "LinkedIn Article Placeholder",
+      "year": "2026",
+      "summary": "A leadership-oriented article about why process ownership, follow-through, and management cadence remain central even as technology stacks become more complex.",
+      "tags": ["Leadership", "Execution", "Dealership Ops"],
+      "url": "#",
+      "linkLabel": "Article Link Placeholder"
+    },
+    {
+      "title": "CRM Process Is a Management System, Not Just a Tool",
+      "category": "CRM",
+      "platform": "LinkedIn Article Placeholder",
+      "year": "2026",
+      "summary": "Framing CRM as an operational discipline that supports coaching, accountability, and customer continuity rather than just data entry.",
+      "tags": ["CRM", "Process", "Coaching"],
+      "url": "#",
+      "linkLabel": "Article Link Placeholder"
+    },
+    {
+      "title": "Fixed Operations Growth Starts with Better Workflow Design",
+      "category": "Fixed Operations",
+      "platform": "Article / Post Placeholder",
+      "year": "2025",
+      "summary": "A practical perspective on service lane consistency, internal handoffs, customer updates, and the importance of repeatable service processes.",
+      "tags": ["Service", "Fixed Ops", "Workflow"],
+      "url": "#",
+      "linkLabel": "Article Link Placeholder"
+    },
+    {
+      "title": "Training That Actually Changes Daily Behavior",
+      "category": "Training",
+      "platform": "LinkedIn Article Placeholder",
+      "year": "2025",
+      "summary": "Explores how training becomes more effective when it is tied directly to daily routines, language, and role-specific expectations.",
+      "tags": ["Training", "Teams", "Standards"],
+      "url": "#",
+      "linkLabel": "Article Link Placeholder"
+    },
+    {
+      "title": "Practical Technology for Frontline Automotive Teams",
+      "category": "Systems",
+      "platform": "Article / Post Placeholder",
+      "year": "2025",
+      "summary": "A systems-thinking piece on choosing tools that simplify work, support decisions, and reduce unnecessary friction for staff.",
+      "tags": ["Systems", "Technology", "Operations"],
+      "url": "#",
+      "linkLabel": "Article Link Placeholder"
+    }
+  ]
+}
