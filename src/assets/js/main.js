@@ -223,12 +223,15 @@ function createArticleCard(article) {
       <p class="eyebrow">${article.category}</p>
       <h3>${article.title}</h3>
       <div class="article-card__meta">
-        ${createMetaPill(article.platform)}
-        ${createMetaPill(article.year)}
+        ${createMetaPill(article.date)}
+        ${createMetaPill(article.readingTime)}
       </div>
       <p class="article-card__summary">${article.summary}</p>
       <div class="article-card__tags">${article.tags.map((tag) => `<span class="tag">${tag}</span>`).join('')}</div>
-      <a class="article-card__link" href="${article.url}">${article.linkLabel}</a>
+      <div class="article-card__actions">
+        <a class="article-card__link" href="article.html?slug=${article.slug}">Read Here</a>
+        <a class="article-card__link article-card__link--secondary" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
+      </div>
     </article>
   `;
 }

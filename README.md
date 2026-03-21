@@ -22,6 +22,7 @@ The repository uses a simple static-file structure with:
     ├── about.html
     ├── experience.html
     ├── articles.html
+    ├── article.html
     ├── projects.html
     ├── contact.html
     ├── assets
@@ -32,6 +33,14 @@ The repository uses a simple static-file structure with:
     │   │   └── headshot-placeholder.svg
     │   └── js
     │       └── main.js
+    ├── content
+    │   └── articles
+    │       ├── operational-discipline-modern-dealerships
+    │       │   └── article.html
+    │       ├── crm-process-management-system
+    │       │   └── article.html
+    │       └── fixed-operations-workflow-design
+    │           └── article.html
     └── data
         ├── profile.json
         ├── experience.json
@@ -44,7 +53,8 @@ The repository uses a simple static-file structure with:
 - `src/index.html` — premium executive landing page with stronger hero hierarchy, summary flow, experience preview, project focus, and writing preview
 - `src/about.html` — professional narrative, leadership themes, and principles
 - `src/experience.html` — expanded executive-style career timeline
-- `src/articles.html` — article cards with category filtering and improved readability
+- `src/articles.html` — article platform index with category filtering and internal/external article links
+- `src/article.html` — dedicated article reader that loads article content by slug
 - `src/projects.html` — strategic project cards for systems, tools, and training work
 - `src/contact.html` — refined professional CTA for outreach and opportunity discussions
 
@@ -54,7 +64,7 @@ Most repeated content is JSON-driven:
 
 - `profile.json` stores name, headline, links, metrics, and about-page principles
 - `experience.json` stores timeline entries
-- `articles.json` stores article cards and filter categories
+- `articles.json` stores article metadata, slugs, reading time, internal content paths, and external LinkedIn URLs
 - `projects.json` stores project cards
 
 This keeps the site easy to maintain while preserving a no-build, framework-free setup.
@@ -102,3 +112,13 @@ The homepage now uses a real `<img>` tag and automatically falls back to `src/as
 - Shared header and footer markup are injected by `main.js`
 - Placeholder locations remain for resume PDF, LinkedIn URL, project links, and article links
 - If you later change file structure, update the JSON paths and navigation links in `src/assets/js/main.js`
+
+## Article Content Structure
+
+Readable article content now lives in static HTML files under `src/content/articles/{slug}/article.html`.
+
+That keeps the site simple and static while allowing each article to have:
+
+- metadata in `src/data/articles.json`
+- an internal readable version loaded into `src/article.html`
+- an external LinkedIn link for the original publication

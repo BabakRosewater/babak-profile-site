@@ -460,6 +460,93 @@ main { padding-bottom: 5rem; }
 }
 .article-card__summary,
 .project-card__summary { margin: 0; }
+.article-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+.article-card__link--secondary {
+  color: var(--muted);
+}
+.article-reader-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.38fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.article-reader-meta {
+  position: sticky;
+  top: 108px;
+  display: grid;
+  gap: 1rem;
+}
+.article-reader-meta__row {
+  display: grid;
+  gap: 0.3rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.article-reader-meta__label {
+  color: var(--accent-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.article-reader-meta__value,
+.article-reader-meta__empty {
+  color: var(--muted);
+}
+.article-reader-meta__actions {
+  display: grid;
+  gap: 0.7rem;
+}
+.article-reader-body {
+  padding: 2rem;
+}
+.article-reader-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+.article-content {
+  color: var(--muted);
+}
+.article-content > :last-child {
+  margin-bottom: 0;
+}
+.article-content h2,
+.article-content h3 {
+  color: var(--heading);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+.article-content h2 {
+  margin: 2.25rem 0 0.9rem;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+}
+.article-content h3 {
+  margin: 1.75rem 0 0.8rem;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+}
+.article-content p,
+.article-content li {
+  color: var(--muted);
+  font-size: 1.03rem;
+}
+.article-content ul {
+  padding-left: 1.2rem;
+}
+.article-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  border-radius: 0 16px 16px 0;
+}
 .article-card__tags,
 .project-card__tags {
   display: flex;
@@ -544,7 +631,8 @@ main { padding-bottom: 5rem; }
   .site-footer__inner,
   .card-grid--two,
   .stat-list--hero,
-  .contact-panel {
+  .contact-panel,
+  .article-reader-layout {
     grid-template-columns: 1fr;
   }
 
@@ -565,6 +653,10 @@ main { padding-bottom: 5rem; }
 
   .site-footer__nav {
     justify-content: flex-start;
+  }
+
+  .article-reader-meta {
+    position: static;
   }
 }
 
