@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "slug": "operational-discipline-modern-dealerships",
+      "title": "Why Operational Discipline Still Wins in Modern Dealerships",
+      "summary": "An operator-focused argument for why management cadence, process ownership, and daily follow-through remain decisive even as dealership technology stacks become more complex.",
+      "category": "Operations",
+      "date": "March 2026",
+      "readingTime": "6 min read",
+      "tags": ["Leadership", "Execution", "Dealership Ops"],
+      "internalPath": "content/articles/operational-discipline-modern-dealerships/article.html",
+      "externalUrl": "#"
+    },
+    {
+      "slug": "crm-process-management-system",
+      "title": "CRM Process Is a Management System, Not Just a Tool",
+      "summary": "Frames CRM as an operating discipline that supports manager coaching, accountability, visibility, and customer continuity rather than simple data entry.",
+      "category": "CRM",
+      "date": "February 2026",
+      "readingTime": "5 min read",
+      "tags": ["CRM", "Process", "Coaching"],
+      "internalPath": "content/articles/crm-process-management-system/article.html",
+      "externalUrl": "#"
+    },
+    {
+      "slug": "fixed-operations-workflow-design",
+      "title": "Fixed Operations Growth Starts with Better Workflow Design",
+      "summary": "A practical perspective on service lane consistency, internal handoffs, customer updates, and the importance of repeatable service processes that teams can actually sustain.",
+      "category": "Fixed Operations",
+      "date": "January 2026",
+      "readingTime": "7 min read",
+      "tags": ["Service", "Fixed Ops", "Workflow"],
+      "internalPath": "content/articles/fixed-operations-workflow-design/article.html",
+      "externalUrl": "#"
+    }
+  ]
+}
