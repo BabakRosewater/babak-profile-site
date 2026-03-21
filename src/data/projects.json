@@ -5,7 +5,7 @@
       "stage": "Current Project",
       "shortLabel": "Operations Documentation",
       "focusArea": "Leadership / Process",
-      "summary": "A placeholder project area for documenting operating standards, department handoffs, and execution expectations across the dealership.",
+      "summary": "A structured playbook initiative for documenting management expectations, departmental handoffs, customer-process standards, and the routines that support better daily execution.",
       "tags": ["Playbooks", "Process", "Accountability"],
       "url": "#",
       "linkLabel": "Project Link Placeholder"
@@ -15,7 +15,7 @@
       "stage": "Current Project",
       "shortLabel": "Customer Process System",
       "focusArea": "CRM / Sales",
-      "summary": "A system-focused initiative for improving lead follow-up consistency, manager visibility, and customer communication standards.",
+      "summary": "A practical framework for improving lead follow-up consistency, manager visibility, task ownership, and customer communication standards throughout the sales process.",
       "tags": ["CRM", "Follow-Up", "Management"],
       "url": "#",
       "linkLabel": "Project Link Placeholder"
@@ -25,7 +25,7 @@
       "stage": "In Development",
       "shortLabel": "Training & Enablement",
       "focusArea": "Service / Fixed Ops",
-      "summary": "A training placeholder covering service process, advisor communication, internal coordination, and operational standards reinforcement.",
+      "summary": "A training initiative focused on service process, advisor communication, internal coordination, and the reinforcement of consistent operating standards inside fixed operations.",
       "tags": ["Training", "Service", "Consistency"],
       "url": "#",
       "linkLabel": "Project Link Placeholder"
@@ -35,7 +35,7 @@
       "stage": "Concept / Buildout",
       "shortLabel": "Systems Visibility",
       "focusArea": "Reporting / Systems",
-      "summary": "A project area for reporting tools that give leaders cleaner visibility into activity, bottlenecks, and coaching opportunities.",
+      "summary": "A reporting and workflow concept intended to give leaders clearer visibility into activity levels, bottlenecks, missed follow-up, and coaching opportunities across the operating model.",
       "tags": ["Reporting", "Dashboards", "Performance"],
       "url": "#",
       "linkLabel": "Project Link Placeholder"

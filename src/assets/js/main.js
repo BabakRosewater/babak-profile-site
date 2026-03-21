@@ -5,13 +5,6 @@ const DATA_PATHS = {
   projects: 'data/projects.json'
 };
 
-const state = {
-  profile: null,
-  experience: [],
-  articles: [],
-  projects: []
-};
-
 const page = document.body.dataset.page || 'home';
 
 async function loadJson(path) {
@@ -20,6 +13,10 @@ async function loadJson(path) {
     throw new Error(`Failed to load ${path}`);
   }
   return response.json();
+}
+
+function createMetaPill(value) {
+  return `<span class="meta-pill">${value}</span>`;
 }
 
 function renderHeader(profile) {
@@ -31,8 +28,7 @@ function renderHeader(profile) {
     ['about', 'About', 'about.html'],
     ['experience', 'Experience', 'experience.html'],
     ['articles', 'Articles', 'articles.html'],
-    ['projects', 'Projects', 'projects.html'],
-    ['contact', 'Contact', 'contact.html']
+    ['projects', 'Projects', 'projects.html']
   ];
 
   target.innerHTML = `
@@ -49,6 +45,7 @@ function renderHeader(profile) {
                 `<a href="${href}" class="${page === key ? 'is-active' : ''}">${label}</a>`
             )
             .join('')}
+          <a href="contact.html" class="button button--secondary button--compact site-nav__cta ${page === 'contact' ? 'is-active' : ''}">Contact</a>
         </nav>
       </div>
     </header>
@@ -62,7 +59,7 @@ function renderFooter(profile) {
   target.innerHTML = `
     <footer class="site-footer">
       <div class="site-footer__inner">
-        <div class="stack-gap">
+        <div>
           <strong>${profile.name}</strong>
           <p>${profile.footerBlurb}</p>
         </div>
@@ -84,8 +81,7 @@ function applyProfileContent(profile) {
   });
 
   document.querySelectorAll('[data-profile-link]').forEach((node) => {
-    const key = node.dataset.profileLink;
-    const item = profile.links[key];
+    const item = profile.links[node.dataset.profileLink];
     if (!item) return;
 
     node.href = item.href;
@@ -127,11 +123,15 @@ function renderHome(profile, experience, articles, projects) {
       .map(
         (item) => `
           <article class="timeline-item">
-            <p class="eyebrow">${item.period}</p>
-            <h3>${item.role}</h3>
+            <div class="timeline-item__header">
+              <div>
+                <p class="eyebrow">${item.period}</p>
+                <h3>${item.role}</h3>
+              </div>
+            </div>
             <div class="timeline-item__meta">
-              <span>${item.company}</span>
-              <span>${item.location}</span>
+              ${createMetaPill(item.company)}
+              ${createMetaPill(item.location)}
             </div>
             <p>${item.summary}</p>
           </article>
@@ -157,10 +157,7 @@ function renderHome(profile, experience, articles, projects) {
 
   const articlesTarget = document.querySelector('[data-articles-preview]');
   if (articlesTarget) {
-    articlesTarget.innerHTML = articles
-      .slice(0, 3)
-      .map(createArticleCard)
-      .join('');
+    articlesTarget.innerHTML = articles.slice(0, 3).map(createArticleCard).join('');
   }
 }
 
@@ -171,7 +168,7 @@ function renderAbout(profile) {
   target.innerHTML = profile.principles
     .map(
       (item) => `
-        <article class="card">
+        <article class="card focus-card">
           <p class="eyebrow">${item.kicker}</p>
           <h3>${item.title}</h3>
           <p>${item.description}</p>
@@ -189,12 +186,16 @@ function renderExperience(experience) {
     .map(
       (item) => `
         <article class="timeline-item">
-          <p class="eyebrow">${item.period}</p>
-          <h3>${item.role}</h3>
+          <div class="timeline-item__header">
+            <div>
+              <p class="eyebrow">${item.period}</p>
+              <h3>${item.role}</h3>
+            </div>
+          </div>
           <div class="timeline-item__meta">
-            <span>${item.company}</span>
-            <span>${item.location}</span>
-            <span>${item.type}</span>
+            ${createMetaPill(item.company)}
+            ${createMetaPill(item.location)}
+            ${createMetaPill(item.type)}
           </div>
           <p>${item.summary}</p>
           <ul class="detail-list">
@@ -212,10 +213,10 @@ function createArticleCard(article) {
       <p class="eyebrow">${article.category}</p>
       <h3>${article.title}</h3>
       <div class="article-card__meta">
-        <span>${article.platform}</span>
-        <span>${article.year}</span>
+        ${createMetaPill(article.platform)}
+        ${createMetaPill(article.year)}
       </div>
-      <p>${article.summary}</p>
+      <p class="article-card__summary">${article.summary}</p>
       <div class="article-card__tags">${article.tags.map((tag) => `<span class="tag">${tag}</span>`).join('')}</div>
       <a class="article-card__link" href="${article.url}">${article.linkLabel}</a>
     </article>
@@ -231,12 +232,13 @@ function renderArticles(articles) {
   let activeCategory = 'All';
 
   const paint = () => {
-    grid.innerHTML = articles
-      .filter((article) => activeCategory === 'All' || article.category === activeCategory)
-      .map(createArticleCard)
-      .join('');
+    const filtered = articles.filter(
+      (article) => activeCategory === 'All' || article.category === activeCategory
+    );
 
-    if (!grid.innerHTML.trim()) {
+    grid.innerHTML = filtered.map(createArticleCard).join('');
+
+    if (!filtered.length) {
       grid.innerHTML = '<div class="empty-state">No articles match this category yet.</div>';
     }
 
@@ -268,10 +270,10 @@ function createProjectCard(project) {
       <p class="eyebrow">${project.stage}</p>
       <h3>${project.title}</h3>
       <div class="project-card__meta">
-        <span>${project.shortLabel}</span>
-        <span>${project.focusArea}</span>
+        ${createMetaPill(project.shortLabel)}
+        ${createMetaPill(project.focusArea)}
       </div>
-      <p>${project.summary}</p>
+      <p class="project-card__summary">${project.summary}</p>
       <div class="project-card__tags">${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join('')}</div>
       <a class="project-card__link" href="${project.url}">${project.linkLabel}</a>
     </article>
@@ -293,19 +295,14 @@ async function init() {
       loadJson(DATA_PATHS.projects)
     ]);
 
-    state.profile = profile;
-    state.experience = experience.items;
-    state.articles = articles.items;
-    state.projects = projects.items;
-
     renderHeader(profile);
     renderFooter(profile);
     applyProfileContent(profile);
-    renderHome(profile, state.experience, state.articles, state.projects);
+    renderHome(profile, experience.items, articles.items, projects.items);
     renderAbout(profile);
-    renderExperience(state.experience);
-    renderArticles(state.articles);
-    renderProjects(state.projects);
+    renderExperience(experience.items);
+    renderArticles(articles.items);
+    renderProjects(projects.items);
   } catch (error) {
     console.error(error);
   }
