@@ -48,10 +48,17 @@
 
         <aside class="hero__aside">
           <div class="card card--highlight stack-gap-lg">
-            <div class="headshot-placeholder">
-              <span>Headshot Placeholder</span>
-              <small>Add a final portrait at <code>babak-rosenthal-mohammadi.jpg</code> or replace this asset directly.</small>
-            </div>
+            <figure class="hero-headshot-frame">
+              <img
+                class="hero-headshot"
+                data-headshot-image
+                src="assets/img/babak-rosenthal-mohammadi.jpg"
+                alt="Babak Mohammadi headshot"
+              />
+              <figcaption class="hero-headshot__caption">
+                Place the final portrait at <code>src/assets/img/babak-rosenthal-mohammadi.jpg</code>. If that file is missing, the site falls back to the bundled placeholder automatically.
+              </figcaption>
+            </figure>
             <div class="hero__profile-links">
               <a href="contact.html">Professional Contact</a>
               <a data-profile-link="linkedin" href="#">LinkedIn Placeholder</a>

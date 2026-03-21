@@ -10,7 +10,7 @@ The repository uses a simple static-file structure with:
 - One shared stylesheet in `src/assets/css/main.css`
 - One shared JavaScript file in `src/assets/js/main.js`
 - JSON-driven content in `src/data/`
-- A placeholder headshot asset in `src/assets/img/`
+- Image assets in `src/assets/img/`
 
 ## Final File Tree
 
@@ -28,6 +28,7 @@ The repository uses a simple static-file structure with:
     │   ├── css
     │   │   └── main.css
     │   ├── img
+    │   │   ├── babak-rosenthal-mohammadi.jpg   # add your final photo here
     │   │   └── headshot-placeholder.svg
     │   └── js
     │       └── main.js
@@ -79,9 +80,25 @@ http://localhost:8000/src/
 
 Any static file server will work as long as it serves the repository root and allows browser access to `src/data/*.json`.
 
+## Headshot Setup
+
+To use a real homepage image:
+
+1. Add your final portrait file at `src/assets/img/babak-rosenthal-mohammadi.jpg`
+2. Commit and push that file to GitHub
+3. Redeploy Cloudflare Pages if it does not auto-deploy
+
+The homepage now uses a real `<img>` tag and automatically falls back to `src/assets/img/headshot-placeholder.svg` if the `.jpg` file is missing.
+
+## Cloudflare Pages Notes
+
+- Use **no build command**
+- Set the **output directory** to `src`
+- If Cloudflare reports `Could not resolve host: github.com`, that is a repository fetch/network issue during cloning rather than a site HTML/CSS build error
+
 ## Notes
 
 - No framework, bundler, or build step is required
 - Shared header and footer markup are injected by `main.js`
-- Placeholder locations remain for headshot, resume PDF, LinkedIn URL, project links, and article links
+- Placeholder locations remain for resume PDF, LinkedIn URL, project links, and article links
 - If you later change file structure, update the JSON paths and navigation links in `src/assets/js/main.js`

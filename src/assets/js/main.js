@@ -19,6 +19,16 @@ function createMetaPill(value) {
   return `<span class="meta-pill">${value}</span>`;
 }
 
+function wireHeadshotFallback() {
+  const image = document.querySelector('[data-headshot-image]');
+  if (!image) return;
+
+  image.addEventListener('error', () => {
+    image.src = 'assets/img/headshot-placeholder.svg';
+    image.classList.add('is-placeholder');
+  }, { once: true });
+}
+
 function renderHeader(profile) {
   const target = document.querySelector('[data-site-header]');
   if (!target) return;
@@ -303,6 +313,7 @@ async function init() {
     renderExperience(experience.items);
     renderArticles(articles.items);
     renderProjects(projects.items);
+    wireHeadshotFallback();
   } catch (error) {
     console.error(error);
   }
