@@ -8,6 +8,14 @@ async function loadArticleData(path) {
   return response.json();
 }
 
+function normalizeArticles(payload) {
+  return Array.isArray(payload) ? payload : payload.items || [];
+}
+
+function getExternalUrl(article) {
+  return article.externalUrl || '#';
+}
+
 function getArticleSlug() {
   const params = new URLSearchParams(window.location.search);
   return params.get('slug');
@@ -39,17 +47,17 @@ function createRelatedArticleMarkup(article) {
       <div class="article-card__tags">${(article.tags || []).map(createTagMarkup).join('')}</div>
       <div class="article-card__actions">
         <a class="article-card__link" href="article.html?slug=${article.slug}">Read Here</a>
-        <a class="article-card__link article-card__link--secondary" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
+        <a class="article-card__link article-card__link--secondary" href="${getExternalUrl(article)}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
       </div>
     </article>
   `;
 }
 
 function updateArticleSeo(article) {
-  document.title = `${article.seo?.title || article.title} | Babak Mohammadi`;
+  document.title = `${article.seo?.metaTitle || article.seo?.title || article.title} | Babak Mohammadi`;
 
-  const description = article.seo?.description || article.summary || article.excerpt || '';
-  const ogTitle = article.seo?.ogTitle || article.title;
+  const description = article.seo?.metaDescription || article.seo?.description || article.summary || article.excerpt || '';
+  const ogTitle = article.seo?.ogTitle || article.seo?.metaTitle || article.title;
   const ogDescription = article.seo?.ogDescription || description;
 
   const descriptionMeta = document.querySelector('[data-article-meta-description]');
@@ -76,7 +84,7 @@ function renderArticleHero(article) {
     <div class="article-card__tags article-card__tags--hero">${(article.tags || []).map(createTagMarkup).join('')}</div>
     <div class="article-reader-actions">
       <a class="button button--secondary button--compact" href="articles.html">Back to Articles</a>
-      <a class="button button--primary button--compact" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
+      <a class="button button--primary button--compact" href="${getExternalUrl(article)}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
     </div>
     ${article.heroImage ? `<img class="article-hero-image" src="${article.heroImage}" alt="${article.heroImageAlt || article.title}" />` : ''}
   `;
@@ -92,10 +100,12 @@ function renderArticleMeta(article) {
     ${createMetaRow('Published', article.date)}
     ${createMetaRow('Reading Time', article.readingTime)}
     ${createMetaRow('Slug', article.slug)}
-    ${createMetaRow('SEO Title', article.seo?.title || article.title)}
+    ${createMetaRow('Author', article.author || 'Babak Mohammadi')}
+    ${createMetaRow('Audience', article.audience || 'Automotive leaders')}
+    ${createMetaRow('SEO Title', article.seo?.metaTitle || article.seo?.title || article.title)}
     <div class="article-reader-meta__actions">
       <a class="text-link" href="article.html?slug=${article.slug}">Readable Version</a>
-      <a class="text-link" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
+      <a class="text-link" href="${getExternalUrl(article)}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
     </div>
   `;
 }
@@ -172,7 +182,7 @@ async function initArticleReader() {
 
   try {
     const articlesPayload = await loadArticleData(ARTICLE_DATA_PATH);
-    const articles = articlesPayload.items;
+    const articles = normalizeArticles(articlesPayload);
     const article = articles.find((item) => item.slug === slug);
 
     if (!article) {

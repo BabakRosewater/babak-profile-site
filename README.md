@@ -131,3 +131,8 @@ That keeps the site simple and static while allowing each article to have:
 
 
 The article platform now supports a featured/searchable thought-leadership hub plus richer article-reader pages while remaining fully static and JSON-driven.
+
+
+## Publishing Library Update
+
+The article library now uses a 24-piece curated publishing set aligned to executive leadership, fixed operations, CRM/process design, systems thinking, and writing-focused thought leadership.

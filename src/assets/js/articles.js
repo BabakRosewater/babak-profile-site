@@ -16,6 +16,14 @@ function createTagMarkup(tag) {
   return `<span class="tag">${tag}</span>`;
 }
 
+function normalizeArticles(payload) {
+  return Array.isArray(payload) ? payload : payload.items || [];
+}
+
+function getExternalUrl(article) {
+  return article.externalUrl || '#';
+}
+
 function createArticleCardMarkup(article) {
   return `
     <article class="card article-card article-card--library" data-category="${article.category}">
@@ -31,7 +39,7 @@ function createArticleCardMarkup(article) {
       <div class="article-card__tags">${article.tags.map(createTagMarkup).join('')}</div>
       <div class="article-card__actions">
         <a class="article-card__link" href="article.html?slug=${article.slug}">Read Here</a>
-        <a class="article-card__link article-card__link--secondary" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
+        <a class="article-card__link article-card__link--secondary" href="${getExternalUrl(article)}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
       </div>
     </article>
   `;
@@ -54,7 +62,7 @@ function createFeaturedArticleMarkup(article) {
         <div class="article-card__tags">${article.tags.map(createTagMarkup).join('')}</div>
         <div class="article-card__actions">
           <a class="article-card__link" href="article.html?slug=${article.slug}">Read Here</a>
-          <a class="article-card__link article-card__link--secondary" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
+          <a class="article-card__link article-card__link--secondary" href="${getExternalUrl(article)}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
         </div>
       </div>
     </article>
@@ -83,7 +91,7 @@ function initArticlesPage(articles) {
     const normalized = query.trim().toLowerCase();
     const filtered = articles.filter((article) => {
       const categoryMatch = activeCategory === 'All' || article.category === activeCategory;
-      const haystack = [article.title, article.summary, article.excerpt, article.category, ...(article.tags || [])]
+      const haystack = [article.title, article.summary, article.excerpt, article.category, article.author, article.audience, ...(article.tags || [])]
         .join(' ')
         .toLowerCase();
       const queryMatch = !normalized || haystack.includes(normalized);
@@ -126,7 +134,7 @@ function initArticlesPage(articles) {
 async function initArticlesLibrary() {
   try {
     const payload = await loadArticleLibrary();
-    initArticlesPage(payload.items);
+    initArticlesPage(normalizeArticles(payload));
   } catch (error) {
     console.error(error);
     const grid = document.querySelector('[data-articles-grid]');

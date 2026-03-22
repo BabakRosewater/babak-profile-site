@@ -182,7 +182,7 @@ function renderHome(profile, experience, articles, projects) {
             <div class="article-card__tags">${(article.tags || []).map((tag) => `<span class="tag">${tag}</span>`).join('')}</div>
             <div class="article-card__actions">
               <a class="article-card__link" href="article.html?slug=${article.slug}">Read Here</a>
-              <a class="article-card__link article-card__link--secondary" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
+              <a class="article-card__link article-card__link--secondary" href="${article.externalUrl || '#'}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
             </div>
           </article>
         `
@@ -272,7 +272,8 @@ async function init() {
     renderHeader(profile);
     renderFooter(profile);
     applyProfileContent(profile);
-    renderHome(profile, experience.items, articles.items, projects.items);
+    const articleItems = Array.isArray(articles) ? articles : articles.items;
+    renderHome(profile, experience.items, articleItems, projects.items);
     renderAbout(profile);
     renderExperience(experience.items);
     renderProjects(projects.items);
