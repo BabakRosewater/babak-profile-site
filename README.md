@@ -29,10 +29,16 @@ The repository uses a simple static-file structure with:
     │   ├── css
     │   │   └── main.css
     │   ├── img
+    │   │   ├── articles
+    │   │   │   ├── operational-discipline-hero.svg
+    │   │   │   ├── crm-management-hero.svg
+    │   │   │   └── fixed-operations-hero.svg
     │   │   ├── babak-rosenthal-mohammadi.jpg   # add your final photo here
     │   │   └── headshot-placeholder.svg
     │   └── js
-    │       └── main.js
+    │       ├── main.js
+    │       ├── articles.js
+    │       └── article-reader.js
     ├── content
     │   └── articles
     │       ├── operational-discipline-modern-dealerships
@@ -53,8 +59,8 @@ The repository uses a simple static-file structure with:
 - `src/index.html` — premium executive landing page with stronger hero hierarchy, summary flow, experience preview, project focus, and writing preview
 - `src/about.html` — professional narrative, leadership themes, and principles
 - `src/experience.html` — expanded executive-style career timeline
-- `src/articles.html` — article platform index with category filtering and internal/external article links
-- `src/article.html` — dedicated article reader that loads article content by slug
+- `src/articles.html` — article hub with featured writing, search, category filtering, tags, and dual internal/external article links
+- `src/article.html` — dedicated article reader with article hero, metadata, related articles, and LinkedIn link
 - `src/projects.html` — strategic project cards for systems, tools, and training work
 - `src/contact.html` — refined professional CTA for outreach and opportunity discussions
 
@@ -64,7 +70,7 @@ Most repeated content is JSON-driven:
 
 - `profile.json` stores name, headline, links, metrics, and about-page principles
 - `experience.json` stores timeline entries
-- `articles.json` stores article metadata, slugs, reading time, internal content paths, and external LinkedIn URLs
+- `articles.json` stores article metadata, slugs, tags, featured flags, excerpts, hero images, related article slugs, internal content paths, external LinkedIn URLs, and basic SEO fields
 - `projects.json` stores project cards
 
 This keeps the site easy to maintain while preserving a no-build, framework-free setup.
@@ -122,3 +128,6 @@ That keeps the site simple and static while allowing each article to have:
 - metadata in `src/data/articles.json`
 - an internal readable version loaded into `src/article.html`
 - an external LinkedIn link for the original publication
+
+
+The article platform now supports a featured/searchable thought-leadership hub plus richer article-reader pages while remaining fully static and JSON-driven.

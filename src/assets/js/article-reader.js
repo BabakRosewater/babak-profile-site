@@ -22,6 +22,45 @@ function createMetaRow(label, value) {
   `;
 }
 
+function createTagMarkup(tag) {
+  return `<span class="tag">${tag}</span>`;
+}
+
+function createRelatedArticleMarkup(article) {
+  return `
+    <article class="card article-card article-card--related">
+      <p class="eyebrow">${article.category}</p>
+      <h3>${article.title}</h3>
+      <div class="article-card__meta">
+        <span class="meta-pill">${article.date}</span>
+        <span class="meta-pill">${article.readingTime}</span>
+      </div>
+      <p class="article-card__summary">${article.excerpt || article.summary}</p>
+      <div class="article-card__tags">${(article.tags || []).map(createTagMarkup).join('')}</div>
+      <div class="article-card__actions">
+        <a class="article-card__link" href="article.html?slug=${article.slug}">Read Here</a>
+        <a class="article-card__link article-card__link--secondary" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
+      </div>
+    </article>
+  `;
+}
+
+function updateArticleSeo(article) {
+  document.title = `${article.seo?.title || article.title} | Babak Mohammadi`;
+
+  const description = article.seo?.description || article.summary || article.excerpt || '';
+  const ogTitle = article.seo?.ogTitle || article.title;
+  const ogDescription = article.seo?.ogDescription || description;
+
+  const descriptionMeta = document.querySelector('[data-article-meta-description]');
+  const ogTitleMeta = document.querySelector('[data-article-meta-og-title]');
+  const ogDescriptionMeta = document.querySelector('[data-article-meta-og-description]');
+
+  if (descriptionMeta) descriptionMeta.setAttribute('content', description);
+  if (ogTitleMeta) ogTitleMeta.setAttribute('content', ogTitle);
+  if (ogDescriptionMeta) ogDescriptionMeta.setAttribute('content', ogDescription);
+}
+
 function renderArticleHero(article) {
   const target = document.querySelector('[data-article-hero]');
   if (!target) return;
@@ -29,11 +68,17 @@ function renderArticleHero(article) {
   target.innerHTML = `
     <p class="eyebrow">${article.category}</p>
     <h1>${article.title}</h1>
-    <p class="page-hero__lede">${article.summary}</p>
+    <p class="page-hero__lede">${article.excerpt || article.summary}</p>
+    <div class="article-card__meta article-card__meta--hero">
+      <span class="meta-pill">${article.date}</span>
+      <span class="meta-pill">${article.readingTime}</span>
+    </div>
+    <div class="article-card__tags article-card__tags--hero">${(article.tags || []).map(createTagMarkup).join('')}</div>
     <div class="article-reader-actions">
       <a class="button button--secondary button--compact" href="articles.html">Back to Articles</a>
       <a class="button button--primary button--compact" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
     </div>
+    ${article.heroImage ? `<img class="article-hero-image" src="${article.heroImage}" alt="${article.heroImageAlt || article.title}" />` : ''}
   `;
 }
 
@@ -46,7 +91,8 @@ function renderArticleMeta(article) {
     ${createMetaRow('Category', article.category)}
     ${createMetaRow('Published', article.date)}
     ${createMetaRow('Reading Time', article.readingTime)}
-    ${createMetaRow('Internal URL', `article.html?slug=${article.slug}`)}
+    ${createMetaRow('Slug', article.slug)}
+    ${createMetaRow('SEO Title', article.seo?.title || article.title)}
     <div class="article-reader-meta__actions">
       <a class="text-link" href="article.html?slug=${article.slug}">Readable Version</a>
       <a class="text-link" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
@@ -66,10 +112,29 @@ async function renderArticleContent(article) {
   target.innerHTML = await response.text();
 }
 
+function renderRelatedArticles(article, articles) {
+  const section = document.querySelector('[data-related-articles-section]');
+  const target = document.querySelector('[data-related-articles]');
+  if (!section || !target) return;
+
+  const related = (article.relatedSlugs || [])
+    .map((slug) => articles.find((item) => item.slug === slug))
+    .filter(Boolean);
+
+  if (!related.length) {
+    section.hidden = true;
+    return;
+  }
+
+  section.hidden = false;
+  target.innerHTML = related.map(createRelatedArticleMarkup).join('');
+}
+
 function renderArticleError(message) {
   const hero = document.querySelector('[data-article-hero]');
   const meta = document.querySelector('[data-article-meta]');
   const content = document.querySelector('[data-article-content]');
+  const relatedSection = document.querySelector('[data-related-articles-section]');
 
   if (hero) {
     hero.innerHTML = `
@@ -92,6 +157,10 @@ function renderArticleError(message) {
   if (content) {
     content.innerHTML = `<div class="empty-state">${message}</div>`;
   }
+
+  if (relatedSection) {
+    relatedSection.hidden = true;
+  }
 }
 
 async function initArticleReader() {
@@ -103,17 +172,19 @@ async function initArticleReader() {
 
   try {
     const articlesPayload = await loadArticleData(ARTICLE_DATA_PATH);
-    const article = articlesPayload.items.find((item) => item.slug === slug);
+    const articles = articlesPayload.items;
+    const article = articles.find((item) => item.slug === slug);
 
     if (!article) {
       renderArticleError(`No article was found for slug: ${slug}`);
       return;
     }
 
-    document.title = `${article.title} | Babak Mohammadi`;
+    updateArticleSeo(article);
     renderArticleHero(article);
     renderArticleMeta(article);
     await renderArticleContent(article);
+    renderRelatedArticles(article, articles);
   } catch (error) {
     console.error(error);
     renderArticleError('The article could not be loaded at this time.');

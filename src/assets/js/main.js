@@ -167,7 +167,27 @@ function renderHome(profile, experience, articles, projects) {
 
   const articlesTarget = document.querySelector('[data-articles-preview]');
   if (articlesTarget) {
-    articlesTarget.innerHTML = articles.slice(0, 3).map(createArticleCard).join('');
+    articlesTarget.innerHTML = articles
+      .slice(0, 3)
+      .map(
+        (article) => `
+          <article class="card article-card">
+            <p class="eyebrow">${article.category}</p>
+            <h3>${article.title}</h3>
+            <div class="article-card__meta">
+              ${createMetaPill(article.date)}
+              ${createMetaPill(article.readingTime)}
+            </div>
+            <p class="article-card__summary">${article.excerpt || article.summary}</p>
+            <div class="article-card__tags">${(article.tags || []).map((tag) => `<span class="tag">${tag}</span>`).join('')}</div>
+            <div class="article-card__actions">
+              <a class="article-card__link" href="article.html?slug=${article.slug}">Read Here</a>
+              <a class="article-card__link article-card__link--secondary" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
+            </div>
+          </article>
+        `
+      )
+      .join('');
   }
 }
 
@@ -217,65 +237,6 @@ function renderExperience(experience) {
     .join('');
 }
 
-function createArticleCard(article) {
-  return `
-    <article class="card article-card" data-category="${article.category}">
-      <p class="eyebrow">${article.category}</p>
-      <h3>${article.title}</h3>
-      <div class="article-card__meta">
-        ${createMetaPill(article.date)}
-        ${createMetaPill(article.readingTime)}
-      </div>
-      <p class="article-card__summary">${article.summary}</p>
-      <div class="article-card__tags">${article.tags.map((tag) => `<span class="tag">${tag}</span>`).join('')}</div>
-      <div class="article-card__actions">
-        <a class="article-card__link" href="article.html?slug=${article.slug}">Read Here</a>
-        <a class="article-card__link article-card__link--secondary" href="${article.externalUrl}" target="_blank" rel="noreferrer">Original on LinkedIn</a>
-      </div>
-    </article>
-  `;
-}
-
-function renderArticles(articles) {
-  const grid = document.querySelector('[data-articles-grid]');
-  const filters = document.querySelector('[data-article-filters]');
-  if (!grid || !filters) return;
-
-  const categories = ['All', ...new Set(articles.map((article) => article.category))];
-  let activeCategory = 'All';
-
-  const paint = () => {
-    const filtered = articles.filter(
-      (article) => activeCategory === 'All' || article.category === activeCategory
-    );
-
-    grid.innerHTML = filtered.map(createArticleCard).join('');
-
-    if (!filtered.length) {
-      grid.innerHTML = '<div class="empty-state">No articles match this category yet.</div>';
-    }
-
-    filters.querySelectorAll('button').forEach((button) => {
-      button.classList.toggle('is-active', button.dataset.category === activeCategory);
-    });
-  };
-
-  filters.innerHTML = categories
-    .map(
-      (category) =>
-        `<button class="filter-chip ${category === 'All' ? 'is-active' : ''}" data-category="${category}" type="button">${category}</button>`
-    )
-    .join('');
-
-  filters.addEventListener('click', (event) => {
-    const button = event.target.closest('button[data-category]');
-    if (!button) return;
-    activeCategory = button.dataset.category;
-    paint();
-  });
-
-  paint();
-}
 
 function createProjectCard(project) {
   return `
@@ -314,7 +275,6 @@ async function init() {
     renderHome(profile, experience.items, articles.items, projects.items);
     renderAbout(profile);
     renderExperience(experience.items);
-    renderArticles(articles.items);
     renderProjects(projects.items);
     wireHeadshotFallback();
   } catch (error) {
