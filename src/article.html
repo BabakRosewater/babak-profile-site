@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article | Babak Mohammadi</title>
+    <meta name="description" content="Article reader page for Babak Mohammadi writing and LinkedIn article content." data-article-meta-description />
+    <meta property="og:title" content="Article | Babak Mohammadi" data-article-meta-og-title />
+    <meta property="og:description" content="Executive article reader page for Babak Mohammadi." data-article-meta-og-description />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body data-page="articles">
+    <div data-site-header></div>
+    <main>
+      <section class="page-hero section-shell narrow-shell" data-article-hero>
+        <p class="eyebrow">Article</p>
+        <h1>Loading article…</h1>
+        <p class="page-hero__lede">Please wait while the article content is loaded.</p>
+      </section>
+
+      <section class="section-shell section-block section-block--spacious narrow-shell-wide">
+        <div class="article-reader-layout">
+          <aside class="card article-reader-meta" data-article-meta>
+            <p class="eyebrow">Article Details</p>
+            <p class="article-reader-meta__empty">Article metadata will appear here.</p>
+          </aside>
+
+          <div class="article-reader-main stack-gap-lg">
+            <article class="card article-reader-body">
+              <div class="article-content" data-article-content>
+                <p class="article-reader-meta__empty">Article content will appear here once loaded.</p>
+              </div>
+            </article>
+
+            <section class="card related-articles-panel" data-related-articles-section hidden>
+              <div class="section-heading left-aligned related-articles-panel__heading">
+                <div>
+                  <p class="eyebrow">Related Reading</p>
+                  <h2>Additional articles from the same thought-leadership library.</h2>
+                </div>
+              </div>
+              <div class="related-articles-grid" data-related-articles></div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div data-site-footer></div>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/article-reader.js" defer></script>
+  </body>
+</html>
