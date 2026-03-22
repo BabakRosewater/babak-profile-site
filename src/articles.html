@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles | Babak Mohammadi</title>
+    <meta name="description" content="Thought leadership hub for Babak Mohammadi, featuring internal article reading, featured insights, and LinkedIn originals." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body data-page="articles">
+    <div data-site-header></div>
+    <main>
+      <section class="page-hero page-hero--articles section-shell">
+        <p class="eyebrow">Thought Leadership</p>
+        <h1>Writing on dealership operations, execution, customer process, and practical systems.</h1>
+        <div class="page-hero__layout">
+          <p class="page-hero__lede">
+            This publishing hub leads with featured writing, a cleaner discovery experience, and internal readable versions of Babak’s strongest operational pieces.
+          </p>
+          <div class="page-hero__aside card card--soft">
+            <p class="eyebrow">Editorial Focus</p>
+            <p>
+              Explore articles on dealership operations, CRM rigor, fixed ops, team execution, and practical systems that improve customer outcomes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell section-block section-block--spacious">
+        <div class="section-heading left-aligned">
+          <p class="eyebrow">Featured Articles</p>
+          <h2>Priority articles that establish the operator’s voice and strategic perspective.</h2>
+        </div>
+        <div class="featured-articles-grid" data-featured-articles></div>
+      </section>
+
+      <section class="section-shell section-block section-block--spacious">
+        <div class="section-heading left-aligned split-header split-header--aligned">
+          <div>
+            <p class="eyebrow">Article Library</p>
+            <h2>A searchable library of writing across operations, CRM, fixed operations, and systems improvement.</h2>
+            <p>Use search and category filters to surface ideas quickly while keeping the experience clean, readable, and executive in tone.</p>
+          </div>
+          <div class="filter-bar" data-article-filters></div>
+        </div>
+
+        <div class="article-controls card card--soft">
+          <label class="article-search" for="article-search-input">
+            <span class="article-search__label">Search articles</span>
+            <input id="article-search-input" type="search" placeholder="Search by title, excerpt, summary, or tag" data-article-search />
+          </label>
+          <p class="article-controls__summary" data-article-results-summary>Loading article library…</p>
+        </div>
+
+        <div class="card-grid card-grid--three" data-articles-grid></div>
+      </section>
+    </main>
+    <div data-site-footer></div>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/articles.js" defer></script>
+  </body>
+</html>

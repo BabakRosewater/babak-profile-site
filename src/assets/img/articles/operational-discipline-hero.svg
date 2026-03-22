@@ -1,0 +1,11 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#101820"/>
+  <rect x="64" y="72" width="1072" height="576" rx="28" fill="#17222D" stroke="#CDA15C" stroke-opacity="0.32"/>
+  <path d="M180 520H1020" stroke="#CDA15C" stroke-opacity="0.55" stroke-width="4"/>
+  <path d="M180 430H840" stroke="#E6EEF8" stroke-opacity="0.16" stroke-width="16" stroke-linecap="round"/>
+  <path d="M180 368H930" stroke="#E6EEF8" stroke-opacity="0.24" stroke-width="16" stroke-linecap="round"/>
+  <path d="M180 306H760" stroke="#CDA15C" stroke-opacity="0.65" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="930" cy="246" r="88" fill="#111922" stroke="#CDA15C" stroke-opacity="0.45" stroke-width="2"/>
+  <text x="180" y="180" fill="#EAF0F7" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">Operational Discipline</text>
+  <text x="180" y="236" fill="#AEB8C6" font-family="Inter, Arial, sans-serif" font-size="28">Clarity • Cadence • Accountability</text>
+</svg>
