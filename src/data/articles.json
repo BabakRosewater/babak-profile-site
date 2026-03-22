@@ -1,0 +1,73 @@
+{
+  "items": [
+    {
+      "slug": "operational-discipline-modern-dealerships",
+      "title": "Why Operational Discipline Still Wins in Modern Dealerships",
+      "summary": "An operator-focused argument for why management cadence, process ownership, and daily follow-through remain decisive even as dealership technology stacks become more complex.",
+      "excerpt": "Technology can support performance, but disciplined operating cadence, ownership, and follow-through still define whether a dealership actually executes well.",
+      "category": "Operations",
+      "date": "March 14, 2026",
+      "readingTime": "6 min read",
+      "featured": true,
+      "featuredLabel": "Featured Insight",
+      "tags": ["Leadership", "Execution", "Dealership Ops"],
+      "heroImage": "assets/img/articles/operational-discipline-hero.svg",
+      "heroImageAlt": "Operational discipline article hero graphic",
+      "relatedSlugs": ["crm-process-management-system", "fixed-operations-workflow-design"],
+      "internalPath": "content/articles/operational-discipline-modern-dealerships/article.html",
+      "externalUrl": "#",
+      "seo": {
+        "title": "Operational Discipline in Modern Dealerships",
+        "description": "Why disciplined execution, management cadence, and clear ownership still outperform technology-first thinking in modern dealerships.",
+        "ogTitle": "Why Operational Discipline Still Wins in Modern Dealerships",
+        "ogDescription": "A practical leadership article on operating cadence, accountability, and execution inside dealership environments."
+      }
+    },
+    {
+      "slug": "crm-process-management-system",
+      "title": "CRM Process Is a Management System, Not Just a Tool",
+      "summary": "Frames CRM as an operating discipline that supports manager coaching, accountability, visibility, and customer continuity rather than simple data entry.",
+      "excerpt": "CRM becomes valuable when it changes managerial behavior, clarifies ownership, and supports customer continuity instead of acting like a passive record system.",
+      "category": "CRM",
+      "date": "February 18, 2026",
+      "readingTime": "5 min read",
+      "featured": true,
+      "featuredLabel": "Management Systems",
+      "tags": ["CRM", "Process", "Coaching"],
+      "heroImage": "assets/img/articles/crm-management-hero.svg",
+      "heroImageAlt": "CRM management system article hero graphic",
+      "relatedSlugs": ["operational-discipline-modern-dealerships", "fixed-operations-workflow-design"],
+      "internalPath": "content/articles/crm-process-management-system/article.html",
+      "externalUrl": "#",
+      "seo": {
+        "title": "CRM Process as a Management System",
+        "description": "A practical article on using CRM as a management system for accountability, coaching, and customer process continuity.",
+        "ogTitle": "CRM Process Is a Management System, Not Just a Tool",
+        "ogDescription": "Why CRM only becomes useful when it reinforces workflow, leadership cadence, and follow-through."
+      }
+    },
+    {
+      "slug": "fixed-operations-workflow-design",
+      "title": "Fixed Operations Growth Starts with Better Workflow Design",
+      "summary": "A practical perspective on service lane consistency, internal handoffs, customer updates, and the importance of repeatable service processes that teams can actually sustain.",
+      "excerpt": "Fixed operations performance improves when service workflow, advisor communication, internal handoffs, and customer updates are intentionally designed rather than left to habit.",
+      "category": "Fixed Operations",
+      "date": "January 22, 2026",
+      "readingTime": "7 min read",
+      "featured": false,
+      "featuredLabel": "Fixed Operations",
+      "tags": ["Service", "Fixed Ops", "Workflow"],
+      "heroImage": "assets/img/articles/fixed-operations-hero.svg",
+      "heroImageAlt": "Fixed operations workflow article hero graphic",
+      "relatedSlugs": ["operational-discipline-modern-dealerships", "crm-process-management-system"],
+      "internalPath": "content/articles/fixed-operations-workflow-design/article.html",
+      "externalUrl": "#",
+      "seo": {
+        "title": "Fixed Operations Workflow Design",
+        "description": "How service workflow, handoffs, communication, and management checkpoints support stronger fixed operations performance.",
+        "ogTitle": "Fixed Operations Growth Starts with Better Workflow Design",
+        "ogDescription": "A practical fixed operations article focused on handoffs, service consistency, and workflow improvement."
+      }
+    }
+  ]
+}
