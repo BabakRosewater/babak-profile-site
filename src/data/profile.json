@@ -1,0 +1,81 @@
+{
+  "name": "Babak Mohammadi",
+  "title": "Automotive Executive",
+  "headline": "Babak Mohammadi is an automotive executive and operational strategist focused on dealership performance, fixed operations, CRM process improvement, and practical systems that strengthen execution across the business.",
+  "footerBlurb": "A premium executive profile site centered on automotive leadership, operational credibility, writing, and systems-focused project work.",
+  "links": {
+    "linkedin": {
+      "label": "LinkedIn URL Placeholder",
+      "href": "#",
+      "external": true
+    },
+    "resume": {
+      "label": "Resume PDF Placeholder",
+      "href": "#",
+      "external": true
+    },
+    "email": {
+      "label": "email@placeholder.com",
+      "href": "mailto:email@placeholder.com",
+      "external": false
+    }
+  },
+  "metrics": [
+    {
+      "value": "Sales, Service & Parts",
+      "label": "Leadership perspective across the operating engine of the dealership"
+    },
+    {
+      "value": "CRM & Process Discipline",
+      "label": "Focused on repeatable workflow, follow-up consistency, and management visibility"
+    },
+    {
+      "value": "Training & Systems",
+      "label": "Practical tools, coaching rhythms, and operational standards for teams"
+    }
+  ],
+  "coreFocus": [
+    {
+      "kicker": "Leadership",
+      "title": "Automotive leadership with operational range",
+      "description": "Positioned with balanced credibility across sales performance, service execution, parts coordination, and overall dealership accountability."
+    },
+    {
+      "kicker": "Fixed Operations",
+      "title": "Improving service workflow and customer continuity",
+      "description": "Emphasizes stronger handoffs, clearer standards, and more reliable execution inside service and fixed operations environments."
+    },
+    {
+      "kicker": "CRM & Process",
+      "title": "Building repeatable systems that managers can coach",
+      "description": "Frames CRM and process design as management tools that support discipline, visibility, and better customer follow-through."
+    },
+    {
+      "kicker": "Writing & Enablement",
+      "title": "Communicating ideas with operational clarity",
+      "description": "Uses writing, training, and structured tools to turn strategic intent into practical standards teams can apply every day."
+    }
+  ],
+  "principles": [
+    {
+      "kicker": "Clarity",
+      "title": "Operational clarity over complexity",
+      "description": "Teams perform better when expectations, ownership, and operating standards are visible, consistent, and reinforced."
+    },
+    {
+      "kicker": "Execution",
+      "title": "Execution as the leadership test",
+      "description": "Strong systems matter because they improve follow-through, customer experience, and manager coaching—not because they appear sophisticated."
+    },
+    {
+      "kicker": "Training",
+      "title": "Coaching tied to daily workflow",
+      "description": "Training is most effective when it supports what people do every day, with language, routines, and tools that map to the real job."
+    },
+    {
+      "kicker": "Technology",
+      "title": "Practical technology adoption",
+      "description": "Technology should reduce friction, improve visibility, and strengthen decision-making inside the dealership—not create extra administrative burden."
+    }
+  ]
+}
