@@ -1,0 +1,12 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" fill="#10161D"/>
+  <rect x="72" y="82" width="1056" height="556" rx="28" fill="#18222D" stroke="#CDA15C" stroke-opacity="0.3"/>
+  <path d="M180 520H1020" stroke="#EAF0F7" stroke-opacity="0.1" stroke-width="2"/>
+  <rect x="188" y="402" width="132" height="118" rx="18" fill="#121A22" stroke="#CDA15C" stroke-opacity="0.45"/>
+  <rect x="344" y="352" width="132" height="168" rx="18" fill="#121A22" stroke="#CDA15C" stroke-opacity="0.6"/>
+  <rect x="500" y="300" width="132" height="220" rx="18" fill="#121A22" stroke="#CDA15C" stroke-opacity="0.72"/>
+  <rect x="656" y="258" width="132" height="262" rx="18" fill="#121A22" stroke="#CDA15C" stroke-opacity="0.82"/>
+  <rect x="812" y="210" width="132" height="310" rx="18" fill="#121A22" stroke="#CDA15C" stroke-opacity="0.92"/>
+  <text x="180" y="170" fill="#EAF0F7" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700">Fixed Operations Workflow</text>
+  <text x="180" y="224" fill="#AEB8C6" font-family="Inter, Arial, sans-serif" font-size="28">Handoffs • Service Flow • Customer Updates</text>
+</svg>
