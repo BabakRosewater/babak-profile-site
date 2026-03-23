@@ -1,0 +1,554 @@
+[
+  {
+    "slug": "the-first-180-days-gm-roadmap",
+    "title": "THE FIRST 180 DAYS: A GM’S ROADMAP TO SUSTAINABLE GROWTH & MARKET LEADERSHIP",
+    "category": "Leadership",
+    "tags": ["General Manager", "Leadership", "Growth", "Strategy"],
+    "readingTime": "4 min read",
+    "featured": true,
+    "summary": "A practical roadmap for new general managers entering a dealership and building sustainable performance, alignment, and market leadership.",
+    "excerpt": "A strong first 180 days requires disciplined observation, alignment, process clarity, and a deliberate path to sustainable performance.",
+    "internalPath": "content/articles/the-first-180-days-gm-roadmap/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Dealership leaders and general managers",
+    "featuredQuote": "Leadership is not speed alone. It is disciplined direction.",
+    "relatedSlugs": [
+      "stop-driving-blind-staff-engagement",
+      "the-essential-mindset-shift-in-automotive-retail"
+    ],
+    "seo": {
+      "metaTitle": "The First 180 Days: GM Roadmap | Babak Mohammadi",
+      "metaDescription": "A practical roadmap for dealership general managers focused on sustainable growth, alignment, and long-term leadership."
+    }
+  },
+  {
+    "slug": "cdk-reports-service-departments-turning-data-into-action",
+    "title": "CDK Reports in Dealership Service Departments: Turning Data into Action",
+    "category": "Fixed Operations",
+    "tags": ["CDK", "Service", "Data", "KPIs"],
+    "readingTime": "4 min read",
+    "featured": true,
+    "summary": "A practical look at using service department reporting to move from passive data collection to active decision-making.",
+    "excerpt": "The best service departments do not just collect reports. They use them to drive decisions, accountability, and improvement.",
+    "internalPath": "content/articles/cdk-reports-service-departments-turning-data-into-action/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Service managers and dealership operators",
+    "featuredQuote": "Good data matters only when it changes decisions.",
+    "relatedSlugs": [
+      "optimizing-service-dispatch-how-to-assign-jobs-efficiently-to-the-right-technicians",
+      "enhancing-service-department-profitability-a-guide-to-gross-profit-retention"
+    ],
+    "seo": {
+      "metaTitle": "CDK Reports in Service Departments | Babak Mohammadi",
+      "metaDescription": "How dealership service leaders can turn CDK reporting into operational decisions and measurable performance improvement."
+    }
+  },
+  {
+    "slug": "stop-driving-blind-staff-engagement",
+    "title": "Stop Driving Blind: Why Staff Engagement is Your Dealership's Most Powerful Leading Indicator",
+    "category": "Leadership",
+    "tags": ["Leadership", "Culture", "Engagement", "Performance"],
+    "readingTime": "6 min read",
+    "featured": true,
+    "summary": "Why staff engagement should be treated as a leading indicator of dealership performance rather than a soft secondary measure.",
+    "excerpt": "Stores that focus only on lagging indicators miss the human drivers of long-term performance.",
+    "internalPath": "content/articles/stop-driving-blind-staff-engagement/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Dealer principals, general managers, and department leaders",
+    "featuredQuote": "Engagement is not separate from performance. It helps create it.",
+    "relatedSlugs": [
+      "the-first-180-days-gm-roadmap",
+      "building-on-mcenerneys-principles-making-your-writing-matter"
+    ],
+    "seo": {
+      "metaTitle": "Staff Engagement as a Leading Indicator | Babak Mohammadi",
+      "metaDescription": "A leadership perspective on why employee engagement is one of the strongest predictors of dealership performance."
+    }
+  },
+  {
+    "slug": "transform-your-dealerships-expenses-into-strategic-investments",
+    "title": "Transform Your Dealership's Expenses into Strategic Investments: The EE Framework",
+    "category": "Leadership",
+    "tags": ["Leadership", "Expense Management", "Profitability", "Strategy"],
+    "readingTime": "4 min read",
+    "featured": true,
+    "summary": "A framework for treating dealership expenses as strategic levers rather than static costs to be cut blindly.",
+    "excerpt": "The goal is not expense reduction in isolation. It is disciplined investment aligned with performance and long-term value.",
+    "internalPath": "content/articles/transform-your-dealerships-expenses-into-strategic-investments/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "General managers and dealership operators",
+    "featuredQuote": "Well-managed expense lines become investment decisions, not just accounting entries.",
+    "relatedSlugs": [
+      "fixed-absorption-safeguarding-dealership-profitability-in-uncertain-times",
+      "understanding-the-financial-health-of-your-parts-department"
+    ],
+    "seo": {
+      "metaTitle": "Strategic Expense Management for Dealerships | Babak Mohammadi",
+      "metaDescription": "A dealership leadership framework for turning expense management into a strategic profitability tool."
+    }
+  },
+  {
+    "slug": "optimizing-service-dispatch-how-to-assign-jobs-efficiently-to-the-right-technicians",
+    "title": "Optimizing Service Dispatch: How to Assign Jobs Efficiently to the Right Technicians",
+    "category": "Fixed Operations",
+    "tags": ["Service", "Dispatch", "Technicians", "Workflow"],
+    "readingTime": "3 min read",
+    "featured": true,
+    "summary": "A practical approach to dispatching work efficiently so technicians stay productive and cycle time improves.",
+    "excerpt": "Better dispatch is not about volume alone. It is about matching work, skill, timing, and flow.",
+    "internalPath": "content/articles/optimizing-service-dispatch-how-to-assign-jobs-efficiently-to-the-right-technicians/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Service managers, foremen, and fixed ops leaders",
+    "featuredQuote": "Good dispatch protects both productivity and customer experience.",
+    "relatedSlugs": [
+      "technician-proficiency-maximizing-efficiency-and-profitability",
+      "the-impact-of-location-on-dealership-service-departments"
+    ],
+    "seo": {
+      "metaTitle": "Optimizing Service Dispatch | Babak Mohammadi",
+      "metaDescription": "How to improve technician productivity and service workflow through better dispatch discipline."
+    }
+  },
+  {
+    "slug": "the-essential-mindset-shift-in-automotive-retail",
+    "title": "The Essential Mindset Shift in Automotive Retail: Moving Beyond Incremental Improvements",
+    "category": "Leadership",
+    "tags": ["Leadership", "Change", "Retail", "Modernization"],
+    "readingTime": "3 min read",
+    "featured": true,
+    "summary": "Why modern automotive retail requires more than small tweaks and demands a deeper operational and cultural shift.",
+    "excerpt": "Incremental fixes are not enough when the operating environment itself has changed.",
+    "internalPath": "content/articles/the-essential-mindset-shift-in-automotive-retail/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Dealership executives and change leaders",
+    "featuredQuote": "A changing market demands a changing mindset.",
+    "relatedSlugs": [
+      "navigating-the-transition-from-traditional-sales-to-a-contemporary-consultative-approach-in-auto-dealerships",
+      "the-first-180-days-gm-roadmap"
+    ],
+    "seo": {
+      "metaTitle": "Mindset Shift in Automotive Retail | Babak Mohammadi",
+      "metaDescription": "Why dealership leaders need to move beyond incremental improvements and embrace deeper operational change."
+    }
+  },
+  {
+    "slug": "understanding-the-financial-health-of-your-parts-department",
+    "title": "Understanding the Financial Health of Your Parts Department: A Guide to Profitability and Break-Even Analysis",
+    "category": "Fixed Operations",
+    "tags": ["Parts", "Profitability", "Financials", "Break-Even"],
+    "readingTime": "3 min read",
+    "featured": false,
+    "summary": "A guide to understanding parts department profitability, break-even analysis, and the financial role of parts in dealership performance.",
+    "excerpt": "The parts department is often under-leveraged because its financial picture is not being understood clearly enough.",
+    "internalPath": "content/articles/understanding-the-financial-health-of-your-parts-department/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Parts managers and dealership leaders",
+    "featuredQuote": "What gets understood financially can be improved operationally.",
+    "relatedSlugs": [
+      "optimizing-your-parts-department-benchmarking-performance-levels",
+      "unlocking-hidden-profits-the-strategic-importance-of-your-dealerships-parts-department"
+    ],
+    "seo": {
+      "metaTitle": "Parts Department Financial Health | Babak Mohammadi",
+      "metaDescription": "A practical guide to parts department profitability and break-even analysis for dealership operators."
+    }
+  },
+  {
+    "slug": "optimizing-your-parts-department-benchmarking-performance-levels",
+    "title": "Optimizing Your Parts Department: Benchmarking Performance Levels",
+    "category": "Fixed Operations",
+    "tags": ["Parts", "Benchmarking", "Performance", "Operations"],
+    "readingTime": "3 min read",
+    "featured": false,
+    "summary": "A benchmark-driven look at how to evaluate and improve parts department performance.",
+    "excerpt": "Benchmarking helps turn vague assumptions about performance into measurable operating standards.",
+    "internalPath": "content/articles/optimizing-your-parts-department-benchmarking-performance-levels/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Parts managers and fixed ops leaders",
+    "featuredQuote": "Benchmarking gives leaders something stronger than opinion: reference points.",
+    "relatedSlugs": [
+      "enhancing-parts-inventory-efficiency-a-comprehensive-guide-for-dealerships",
+      "parts-checkup-checklist-a-strategic-tool-for-maximizing-efficiency-and-profitability"
+    ],
+    "seo": {
+      "metaTitle": "Parts Department Benchmarking | Babak Mohammadi",
+      "metaDescription": "How to benchmark parts department performance and improve operational efficiency in a dealership."
+    }
+  },
+  {
+    "slug": "unlocking-hidden-profits-the-strategic-importance-of-your-dealerships-parts-department",
+    "title": "Unlocking Hidden Profits: The Strategic Importance of Your Dealership's Parts Department",
+    "category": "Fixed Operations",
+    "tags": ["Parts", "Profitability", "Strategy", "Operations"],
+    "readingTime": "3 min read",
+    "featured": false,
+    "summary": "An argument for treating the parts department as a strategic profit center rather than a support function in the background.",
+    "excerpt": "The parts department becomes more valuable when it is viewed as a performance engine, not just a supply room.",
+    "internalPath": "content/articles/unlocking-hidden-profits-the-strategic-importance-of-your-dealerships-parts-department/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Dealer principals, GMs, and fixed ops leaders",
+    "featuredQuote": "Some of the most overlooked profits live in the least celebrated department.",
+    "relatedSlugs": [
+      "understanding-the-financial-health-of-your-parts-department",
+      "the-untapped-potential-of-the-parts-department"
+    ],
+    "seo": {
+      "metaTitle": "Strategic Importance of the Parts Department | Babak Mohammadi",
+      "metaDescription": "Why the parts department deserves more strategic attention from dealership leadership."
+    }
+  },
+  {
+    "slug": "industry-growth-fixed-operations-opportunities",
+    "title": "INDUSTRY GROWTH: FIXED OPERATIONS OPPORTUNITIES",
+    "category": "Fixed Operations",
+    "tags": ["Fixed Operations", "Industry Trends", "Growth", "Strategy"],
+    "readingTime": "8 min read",
+    "featured": true,
+    "summary": "A broader strategic view of why fixed operations remains one of the most important growth opportunities for modern dealerships.",
+    "excerpt": "As front-end pressures rise, fixed operations becomes not just important but essential to long-term stability and growth.",
+    "internalPath": "content/articles/industry-growth-fixed-operations-opportunities/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Dealer principals, GMs, and fixed ops leaders",
+    "featuredQuote": "The future of dealership resilience runs through fixed operations.",
+    "relatedSlugs": [
+      "fixed-absorption-safeguarding-dealership-profitability-in-uncertain-times",
+      "why-most-dealerships-are-missing-out-on-service-revenue"
+    ],
+    "seo": {
+      "metaTitle": "Fixed Operations Opportunities | Babak Mohammadi",
+      "metaDescription": "A strategic analysis of why fixed operations is a major growth opportunity for dealerships."
+    }
+  },
+  {
+    "slug": "fixed-absorption-safeguarding-dealership-profitability-in-uncertain-times",
+    "title": "FIXED ABSORPTION: SAFEGUARDING DEALERSHIP PROFITABILITY IN UNCERTAIN TIMES",
+    "category": "Fixed Operations",
+    "tags": ["Fixed Absorption", "Profitability", "Financial Strategy", "Fixed Ops"],
+    "readingTime": "2 min read",
+    "featured": false,
+    "summary": "A concise explanation of why fixed absorption remains one of the most important indicators of dealership resilience.",
+    "excerpt": "In uncertain times, absorption is more than a number. It is a test of operational stability.",
+    "internalPath": "content/articles/fixed-absorption-safeguarding-dealership-profitability-in-uncertain-times/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "General managers and fixed ops leaders",
+    "featuredQuote": "Absorption turns operational strength into financial protection.",
+    "relatedSlugs": [
+      "industry-growth-fixed-operations-opportunities",
+      "enhancing-service-department-profitability-a-guide-to-gross-profit-retention"
+    ],
+    "seo": {
+      "metaTitle": "Fixed Absorption and Profitability | Babak Mohammadi",
+      "metaDescription": "Why fixed absorption is a critical measure of dealership profitability and resilience."
+    }
+  },
+  {
+    "slug": "enhancing-service-department-profitability-a-guide-to-gross-profit-retention",
+    "title": "Enhancing Service Department Profitability: A Guide to Gross Profit Retention",
+    "category": "Fixed Operations",
+    "tags": ["Service", "Profitability", "Gross Retention", "Financial Performance"],
+    "readingTime": "3 min read",
+    "featured": false,
+    "summary": "A practical look at service gross profit retention and why it matters for long-term fixed ops performance.",
+    "excerpt": "Profitability improves when leaders move from casual awareness of metrics to disciplined operating control.",
+    "internalPath": "content/articles/enhancing-service-department-profitability-a-guide-to-gross-profit-retention/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Service managers and dealership operators",
+    "featuredQuote": "Strong service performance depends on managing both workflow and margin discipline.",
+    "relatedSlugs": [
+      "effective-labor-rate-elr-for-service-departments",
+      "service-department-analysis-and-parts-to-labor-ratio"
+    ],
+    "seo": {
+      "metaTitle": "Service Gross Profit Retention | Babak Mohammadi",
+      "metaDescription": "How service department leaders can improve profitability through stronger gross profit retention discipline."
+    }
+  },
+  {
+    "slug": "service-department-analysis-and-parts-to-labor-ratio",
+    "title": "SERVICE DEPARTMENT ANALYSIS & PARTS TO LABOR RATIO",
+    "category": "Fixed Operations",
+    "tags": ["Service", "Parts-to-Labor Ratio", "Analysis", "Operations"],
+    "readingTime": "4 min read",
+    "featured": false,
+    "summary": "A practical analysis of the parts-to-labor ratio and why it matters in evaluating service department balance and performance.",
+    "excerpt": "The parts-to-labor ratio is not just a number. It reflects service mix, opportunity capture, and operational discipline.",
+    "internalPath": "content/articles/service-department-analysis-and-parts-to-labor-ratio/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Service managers and fixed ops leaders",
+    "featuredQuote": "Balanced service performance leaves clues in the ratio structure.",
+    "relatedSlugs": [
+      "effective-labor-rate-elr-for-service-departments",
+      "industry-growth-fixed-operations-opportunities"
+    ],
+    "seo": {
+      "metaTitle": "Parts to Labor Ratio in Service | Babak Mohammadi",
+      "metaDescription": "A dealership service analysis of the parts-to-labor ratio and what it reveals about operational performance."
+    }
+  },
+  {
+    "slug": "why-most-dealerships-are-missing-out-on-service-revenue",
+    "title": "Why Most Dealerships Are Missing Out on Service Revenue: Unlocking Hidden Potential",
+    "category": "Fixed Operations",
+    "tags": ["Service Revenue", "Growth", "Training", "Fixed Ops"],
+    "readingTime": "3 min read",
+    "featured": true,
+    "summary": "A concise argument for why many dealerships underperform in service and how stronger systems can unlock missed revenue.",
+    "excerpt": "The gap is often not market opportunity. It is execution, consistency, and process discipline.",
+    "internalPath": "content/articles/why-most-dealerships-are-missing-out-on-service-revenue/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Dealer leaders and fixed ops teams",
+    "featuredQuote": "Missed service revenue is usually a systems problem before it is a market problem.",
+    "relatedSlugs": [
+      "industry-growth-fixed-operations-opportunities",
+      "optimizing-service-dispatch-how-to-assign-jobs-efficiently-to-the-right-technicians"
+    ],
+    "seo": {
+      "metaTitle": "Why Dealerships Miss Service Revenue | Babak Mohammadi",
+      "metaDescription": "A look at why dealerships leave service revenue on the table and how stronger operational systems can change that."
+    }
+  },
+  {
+    "slug": "advanced-process-settings-and-termination-in-vinsolutions",
+    "title": "Advanced Process Settings & Termination in VinSolutions",
+    "category": "CRM & Sales Process",
+    "tags": ["VinSolutions", "CRM", "Sales Process", "Configuration"],
+    "readingTime": "3 min read",
+    "featured": false,
+    "summary": "A process-focused look at how VinSolutions settings can shape execution, efficiency, and follow-up discipline.",
+    "excerpt": "CRM performance is rarely just about software. It is about how settings shape behavior and accountability.",
+    "internalPath": "content/articles/advanced-process-settings-and-termination-in-vinsolutions/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Sales managers and CRM administrators",
+    "featuredQuote": "Process design inside the CRM becomes process discipline on the floor.",
+    "relatedSlugs": [
+      "actionable-strategies-for-implementing-vinsolutions-effectively",
+      "optimizing-crm-settings-in-vinsolutions"
+    ],
+    "seo": {
+      "metaTitle": "Advanced VinSolutions Settings | Babak Mohammadi",
+      "metaDescription": "How advanced process settings in VinSolutions affect dealership CRM execution and accountability."
+    }
+  },
+  {
+    "slug": "actionable-strategies-for-implementing-vinsolutions-effectively",
+    "title": "Actionable Strategies for Implementing VinSolutions Effectively",
+    "category": "CRM & Sales Process",
+    "tags": ["VinSolutions", "CRM", "Implementation", "Process"],
+    "readingTime": "3 min read",
+    "featured": true,
+    "summary": "A practical implementation view of VinSolutions focused on aligning platform configuration with dealership process needs.",
+    "excerpt": "Effective CRM implementation is less about installation and more about alignment with the real process on the ground.",
+    "internalPath": "content/articles/actionable-strategies-for-implementing-vinsolutions-effectively/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Sales leaders and dealership operators",
+    "featuredQuote": "A CRM becomes valuable when it reflects reality and improves it.",
+    "relatedSlugs": [
+      "understanding-sales-processes-in-vinsolutions",
+      "optimizing-crm-settings-in-vinsolutions"
+    ],
+    "seo": {
+      "metaTitle": "Implementing VinSolutions Effectively | Babak Mohammadi",
+      "metaDescription": "Actionable strategies for configuring and implementing VinSolutions in ways that strengthen dealership execution."
+    }
+  },
+  {
+    "slug": "understanding-sales-processes-in-vinsolutions",
+    "title": "UNDERSTANDING SALES PROCESSES IN VINSOLUTIONS",
+    "category": "CRM & Sales Process",
+    "tags": ["VinSolutions", "Sales Process", "CRM", "Workflow"],
+    "readingTime": "2 min read",
+    "featured": false,
+    "summary": "An overview of how sales processes in VinSolutions structure customer interactions and workflow consistency.",
+    "excerpt": "Clear process structure inside the CRM helps make follow-up more consistent and measurable.",
+    "internalPath": "content/articles/understanding-sales-processes-in-vinsolutions/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Sales managers and internet sales teams",
+    "featuredQuote": "Sales consistency begins with process clarity.",
+    "relatedSlugs": [
+      "advanced-process-settings-and-termination-in-vinsolutions",
+      "optimizing-crm-settings-in-vinsolutions"
+    ],
+    "seo": {
+      "metaTitle": "Sales Processes in VinSolutions | Babak Mohammadi",
+      "metaDescription": "An overview of how VinSolutions sales processes support structured customer follow-up and workflow consistency."
+    }
+  },
+  {
+    "slug": "optimizing-crm-settings-in-vinsolutions",
+    "title": "OPTIMIZING CRM SETTINGS IN VINSOLUTIONS",
+    "category": "CRM & Sales Process",
+    "tags": ["CRM", "VinSolutions", "Optimization", "Customer Follow-Up"],
+    "readingTime": "2 min read",
+    "featured": false,
+    "summary": "A concise guide to optimizing CRM settings so customer follow-up becomes more personalized, efficient, and measurable.",
+    "excerpt": "The settings inside the CRM quietly shape the experience your customers and team members actually live.",
+    "internalPath": "content/articles/optimizing-crm-settings-in-vinsolutions/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "CRM managers and dealership sales leaders",
+    "featuredQuote": "Better settings create better follow-up.",
+    "relatedSlugs": [
+      "actionable-strategies-for-implementing-vinsolutions-effectively",
+      "crm-setting-process-vinsolutions-accessing-sales-processes-setting"
+    ],
+    "seo": {
+      "metaTitle": "Optimizing CRM Settings in VinSolutions | Babak Mohammadi",
+      "metaDescription": "How to optimize VinSolutions CRM settings for stronger follow-up and dealership workflow execution."
+    }
+  },
+  {
+    "slug": "leveraging-the-cdk-drive-repair-order-api-for-efficient-repair-order-management",
+    "title": "Leveraging the CDK Drive Repair Order API for Efficient Repair Order Management",
+    "category": "Systems & Data",
+    "tags": ["CDK Drive", "API", "Repair Orders", "Technology"],
+    "readingTime": "4 min read",
+    "featured": true,
+    "summary": "A strong example of your systems-thinking side, connecting dealership operations with technical infrastructure and repair order management.",
+    "excerpt": "Operational improvement increasingly depends on leaders who can bridge process and technology.",
+    "internalPath": "content/articles/leveraging-the-cdk-drive-repair-order-api-for-efficient-repair-order-management/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Dealership operators, analysts, and technical builders",
+    "featuredQuote": "Better systems make better operational decisions possible.",
+    "relatedSlugs": [
+      "part-one-a-deep-dive-into-the-repair-order-data-structure",
+      "strategic-data-collection-and-repository-building-for-enhanced-dealership-performance"
+    ],
+    "seo": {
+      "metaTitle": "CDK Drive Repair Order API | Babak Mohammadi",
+      "metaDescription": "A practical look at using the CDK Drive Repair Order API to improve dealership repair order workflow and visibility."
+    }
+  },
+  {
+    "slug": "part-one-a-deep-dive-into-the-repair-order-data-structure",
+    "title": "Part One: A Deep Dive into the Repair Order Data Structure",
+    "category": "Systems & Data",
+    "tags": ["Repair Orders", "Data Structure", "Fixed Ops", "Systems"],
+    "readingTime": "3 min read",
+    "featured": false,
+    "summary": "A systems-focused exploration of repair order structure and the value of operational data clarity in fixed operations.",
+    "excerpt": "When the data structure is understood, process visibility and decision quality improve.",
+    "internalPath": "content/articles/part-one-a-deep-dive-into-the-repair-order-data-structure/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Operations leaders and technical process builders",
+    "featuredQuote": "Structure is what makes operational data usable.",
+    "relatedSlugs": [
+      "leveraging-the-cdk-drive-repair-order-api-for-efficient-repair-order-management",
+      "part-two-repair-order-status"
+    ],
+    "seo": {
+      "metaTitle": "Repair Order Data Structure | Babak Mohammadi",
+      "metaDescription": "A deep dive into repair order data structure and why it matters for fixed operations clarity and systems thinking."
+    }
+  },
+  {
+    "slug": "strategic-data-collection-and-repository-building-for-enhanced-dealership-performance",
+    "title": "Strategic Data Collection and Repository Building for Enhanced Dealership Performance",
+    "category": "Systems & Data",
+    "tags": ["Data", "Repository", "Performance", "Systems Thinking"],
+    "readingTime": "2 min read",
+    "featured": false,
+    "summary": "A concise statement of your data-and-systems mindset, focused on building repositories that make better decisions possible.",
+    "excerpt": "Strategic data collection matters because scattered information rarely produces strong decisions.",
+    "internalPath": "content/articles/strategic-data-collection-and-repository-building-for-enhanced-dealership-performance/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Dealership operators and systems-minded leaders",
+    "featuredQuote": "Data becomes powerful when it is organized for use, not just stored.",
+    "relatedSlugs": [
+      "leveraging-the-cdk-drive-repair-order-api-for-efficient-repair-order-management",
+      "workflow-to-segmented-sales-journey-a-data-driven-approach-to-car-dealership-operations"
+    ],
+    "seo": {
+      "metaTitle": "Strategic Data Collection for Dealerships | Babak Mohammadi",
+      "metaDescription": "Why structured data collection and repository design improve dealership performance and decision-making."
+    }
+  },
+  {
+    "slug": "building-on-mcenerneys-principles-making-your-writing-matter",
+    "title": "Building on McEnerney’s Principles: Making Your Writing Matter",
+    "category": "Writing & Perspective",
+    "tags": ["Writing", "Communication", "Audience", "Thought Leadership"],
+    "readingTime": "3 min read",
+    "featured": false,
+    "summary": "A strong thought-leadership piece showing that you care about communication, audience value, and writing with purpose.",
+    "excerpt": "Strong writing becomes more valuable when it is built around the reader rather than the writer.",
+    "internalPath": "content/articles/building-on-mcenerneys-principles-making-your-writing-matter/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Leaders, writers, and professionals",
+    "featuredQuote": "Writing matters more when it creates value for someone else.",
+    "relatedSlugs": [
+      "beyond-self-expression-larry-mcenerneys-strategic-approach-to-writing-with-purpose",
+      "stop-driving-blind-staff-engagement"
+    ],
+    "seo": {
+      "metaTitle": "Making Your Writing Matter | Babak Mohammadi",
+      "metaDescription": "A reflection on audience-centered writing, communication, and thought leadership."
+    }
+  },
+  {
+    "slug": "beyond-self-expression-larry-mcenerneys-strategic-approach-to-writing-with-purpose",
+    "title": "Beyond Self-Expression: Larry McEnerney’s Strategic Approach To Writing With Purpose",
+    "category": "Writing & Perspective",
+    "tags": ["Writing", "Purpose", "Audience", "Communication"],
+    "readingTime": "5 min read",
+    "featured": true,
+    "summary": "A defining article for the writing side of your profile, centered on audience, purpose, and communication that creates value.",
+    "excerpt": "Writing becomes more powerful when it is treated as a tool for impact rather than self-expression alone.",
+    "internalPath": "content/articles/beyond-self-expression-larry-mcenerneys-strategic-approach-to-writing-with-purpose/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Professionals, writers, and leaders",
+    "featuredQuote": "Purposeful writing begins when the reader matters.",
+    "relatedSlugs": [
+      "building-on-mcenerneys-principles-making-your-writing-matter",
+      "the-experience-economy-a-deep-dive-into-memorable-business-interactions"
+    ],
+    "seo": {
+      "metaTitle": "Beyond Self-Expression | Babak Mohammadi",
+      "metaDescription": "A reflection on Larry McEnerney’s audience-centered approach to writing with purpose and professional value."
+    }
+  },
+  {
+    "slug": "the-experience-economy-a-deep-dive-into-memorable-business-interactions",
+    "title": "The Experience Economy: A Deep Dive into Memorable Business Interactions",
+    "category": "Writing & Perspective",
+    "tags": ["Experience", "Customer Experience", "Leadership", "Business"],
+    "readingTime": "2 min read",
+    "featured": false,
+    "summary": "A broader perspective piece that supports your interest in customer experience, business design, and memorable interactions.",
+    "excerpt": "Memorable experiences are rarely accidental. They are designed through intention, process, and empathy.",
+    "internalPath": "content/articles/the-experience-economy-a-deep-dive-into-memorable-business-interactions/article.html",
+    "externalUrl": "",
+    "author": "Babak Mohammadi",
+    "audience": "Leaders and customer experience thinkers",
+    "featuredQuote": "Experience becomes a differentiator when it is designed deliberately.",
+    "relatedSlugs": [
+      "purpose-driven-process-navigating-the-guest-experience",
+      "beyond-self-expression-larry-mcenerneys-strategic-approach-to-writing-with-purpose"
+    ],
+    "seo": {
+      "metaTitle": "The Experience Economy | Babak Mohammadi",
+      "metaDescription": "A reflection on memorable business interactions, customer experience, and thoughtful operational design."
+    }
+  }
+]
