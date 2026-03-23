@@ -203,6 +203,12 @@ main { padding-bottom: 5rem; }
   max-width: 66ch;
   margin-bottom: 0;
 }
+.page-hero--balanced h1 {
+  max-width: 24ch;
+}
+.page-hero--balanced .page-hero__lede {
+  max-width: 72ch;
+}
 .summary-bar {
   display: grid;
   gap: 1rem;
